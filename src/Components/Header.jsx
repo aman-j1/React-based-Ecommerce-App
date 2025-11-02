@@ -208,6 +208,7 @@ function Header() {
                     style={{ cursor: "pointer" }}
                     onClick={() => handleSuggestionClick(item.title)}
                   >
+                    <Link to={`/product/${item.id}`} style={{textDecoration: "none"}}>
                     <img
                       src={item.thumbnail}
                       alt={item.title}
@@ -219,11 +220,12 @@ function Header() {
                         marginRight: "10px",
                       }}
                     />
-                    <div>
-                      <div style={{ fontSize: "0.9rem", fontWeight: "500" }}>
+                   
+                      <span style={{ fontSize: "0.9rem", fontWeight: "500", color: "#000" }}>
                         {item.title}
-                      </div>                      
-                    </div>
+                      </span>                      
+                    
+                    </Link>
                   </li>
                 ))}
               </ul>
