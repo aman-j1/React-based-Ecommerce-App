@@ -84,6 +84,8 @@ const Products = () => {
   const totalPages = Math.ceil(filteredData.length / productsPerPage);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const PagCondition = filteredData.length > productsPerPage
   return (
     <>
       <div className="select">
@@ -97,7 +99,7 @@ const Products = () => {
         </select>
       </div>
 
-      <div className="card-grid">
+      <div className={PagCondition ? "card-grid" : "card-grid bottomSpace"}>
         {currentProducts.map((item, i) => (
           
             <Card key={i}>
@@ -124,7 +126,8 @@ const Products = () => {
             </Card>          
         ))}
       </div>
-
+      
+      {PagCondition && (
       <div className="d-flex justify-content-center my-4">
         <Pagination>
           <Pagination.Prev
@@ -148,6 +151,7 @@ const Products = () => {
           />
         </Pagination>
       </div>
+      )}
     </>
   );
 };

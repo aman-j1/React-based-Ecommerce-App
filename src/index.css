@@ -82,6 +82,9 @@ img.card-img-top {
     gap: 12px;
     align-items: center;
 }
+.card-grid.bottomSpace {
+    padding-bottom: 40px;
+}
 .cartWrap .topWrap {
         padding: 0 12px;
     max-width: 1200px;
