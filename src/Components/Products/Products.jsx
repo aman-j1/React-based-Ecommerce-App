@@ -15,7 +15,7 @@ const Products = () => {
 
   // 🟢 Pagination states
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 8; // Number of products per page
+  const productsPerPage = 9; // Number of products per page
 
   const { searchTerm } = useContext(SearchContexts);
   const { addToCart, addToWishlist } = useContext(ProductContext);
