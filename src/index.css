@@ -12,7 +12,12 @@ body.dark {
     position: relative;
     width: 20px;
 }
-
+.dropdown-menu[data-bs-popper]{
+    right: 0;
+    left: auto !important;
+    top: 130% !important;
+    margin-top: var(--bs-dropdown-spacer);
+}
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
